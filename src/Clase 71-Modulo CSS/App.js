@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./componentes/Header/Header";
-import Menu from "./componentes/Menu/Menu";
+import MenuContainer from "./componentes/MenuContainer/MenuContainer";
+import Menu from 'Clase 71-Modulo CSS/componentes/Menu/Menu'
 import ItemSection from "./componentes/Item Section/ItemSection";
 import Card from "./componentes/Card/Card";
 import CardsContainer from "./componentes/CardsContainer/CardsContainer";
@@ -12,11 +13,18 @@ function App() {
       <Header></Header>
       <main className={style.principal}>
         <aside>
-          <Menu titulo="MENU">
-            <ItemSection>My Courses</ItemSection>
-            <ItemSection>My Categories</ItemSection>
-            <ItemSection>My Messages</ItemSection>
-          </Menu>
+            <MenuContainer>
+                <Menu titulo= 'MENU'>
+                    <ItemSection>My Courses</ItemSection>
+                    <ItemSection>My Categories</ItemSection>
+                    <ItemSection>My Messages</ItemSection>
+                </Menu>
+                <Menu titulo= 'Groups'>
+                    <ItemSection>UI/UX</ItemSection>
+                    <ItemSection>Industrial Design</ItemSection>
+                    <ItemSection>Architecture</ItemSection>
+                </Menu>
+            </MenuContainer>
         </aside>
         <CardsContainer>
           <Card
